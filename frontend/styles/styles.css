@@ -1,0 +1,291 @@
+@font-face {
+    font-family: 'Cakecafe';
+    /* Certifique-se de que os caminhos para as fontes estão corretos */
+    src: url('../fonts/Cakecafe.otf') format('otf'), url('../fonts/Cakecafe.ttf') format('truetype');
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+:root{
+    --font-padrao: 'Poppins', sans-serif;
+    --font-destaque: 'Cakecafe', sans-serif;
+    --font-black: rgb(22, 22, 22);
+    --color-clara: #f5f7fa;
+    --color-primary: #07c0db; /* Variável para a cor principal */
+    --color-text: #333;
+}
+
+/* GLOBAL STYLES */
+
+/* GLOBAL STYLES */
+
+body{
+    background-color: #0b0b0b;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.container-geral{
+    /* Aumentado o max-width para dar mais espaço em telas grandes */
+    max-width: 1920px; 
+    /* Mantenha o 90vw, mas a largura máxima controlará o limite */
+    width: 90vw; 
+    min-height: 100vh;
+    background-color: var(--color-clara);
+    border-radius: 15px;
+    margin: 0 auto;
+}
+/* ... (Mantenha o resto do CSS global inalterado) ... */
+.container-01{
+    width: 100%;
+    border-radius: 15px;
+}
+.bt-padrao{
+    padding: 10px 50px;
+    border-radius: 30px;
+    font-family: var(--font-destaque);
+    font-size: 1.5rem;
+    cursor: pointer;
+    background-color: var(--color-primary);
+    color: #e8ecf7;
+    border: none;
+    transition: background-color 0.3s;
+}
+.bt-padrao:hover {
+    background-color: #05a0b5;
+}
+/* END GLOBAL STYLES */
+
+/* NAV MENU */
+#logo-nav-menu{
+    width: 130px;
+}
+nav{
+    margin: 0 50px;
+    padding-top: 20px;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.links-menu{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+.links-menu li{
+    font-family: var(--font-destaque);
+    color: var(--color-primary);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+.links-menu li:hover {
+    color: var(--font-black);
+}
+/* END NAV MENU */
+
+/* HEADER */
+header{
+    padding: 50px 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header h1{
+    font-family: var(--font-destaque);
+    color: var(--color-primary);
+    /* Tamanho responsivo: Mínimo 3rem, máximo 8rem, ajusta até 10vw */
+    font-size: clamp(3rem, 10vw, 8rem); 
+    margin-top: 0;
+}
+header p{
+    font-family: var(--font-padrao);
+    color: var(--color-text);
+    /* Tamanho responsivo: Mínimo 0.8rem, máximo 1.5rem, ajusta até 1.4vw */
+    font-size: clamp(0.8rem, 1.4vw, 1.5rem);
+    letter-spacing: 6px;
+    margin-top: 10px;
+    font-weight: 300;
+}
+.bt-bonito{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    gap: 5px;
+}
+.bt-bonito button{
+    margin-top: 0;
+    background-color: var(--color-primary);
+    color: #e8ecf7 ;
+}
+/* END HEADER */
+
+/* MAIN */
+main{
+    width: 100%;
+    padding: 40px 0;
+}
+.maisde{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: baseline;
+    color: var(--color-primary);
+}
+.maisde h3{
+    /* Tamanho responsivo para o "+" */
+    font-size: clamp(3rem, 8vw, 6rem); 
+    margin-top: 0; 
+    margin-right: -0.5vw;
+    color: var(--font-black);
+    line-height: 1;
+}
+.maisde h2{
+    font-size: clamp(3rem, 8vw, 6rem);
+    line-height: 1;
+}
+
+.revendedores{
+    margin-top: -1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.revendedores h3{
+    /* Tamanho responsivo para o número */
+    font-size: clamp(6rem, 14vw, 12rem);
+    color: var(--font-black);
+    line-height: 1;
+}
+.revendedores p{
+    margin-top: -1rem;
+    font-size: clamp(1rem, 2vw, 1.8rem);
+    font-weight: 200;
+    letter-spacing: 0.5rem;
+    text-align: center;
+}
+/* END MAIN */
+
+/* PADRAO CARD E FEEDBACKS (Estilizado para ficar bonito) */
+
+.feedbacks {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    font-family: var(--font-destaque);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    color: var(--font-black);
+    margin-bottom: 40px;
+}
+
+.feedbacks-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 50px;
+}
+
+.padrao-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Efeito Hover */
+.padrao-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.nome-feedback{
+    font-family: var(--font-destaque);
+    font-size: 1.8rem;
+    color: var(--color-primary);
+    margin-bottom: 5px;
+}
+.funcao{
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #666;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    width: 100%;
+}
+.clissificacao{
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+}
+.comment{
+    font-size: 1rem;
+    color: var(--color-text);
+    line-height: 1.5;
+    margin-top: 10px;
+}
+/* END PADRAO CARD */
+
+
+/* RESPONSIVIDADE (MOBILE FIRST) */
+
+/* Media Query para Tablets e Telas Médias (900px) */
+@media (max-width: 900px) {
+    .container-geral {
+        width: 100vw;
+        border-radius: 0;
+    }
+    
+    nav {
+        margin: 0 20px;
+    }
+    .links-menu {
+        display: none; /* Esconde links de navegação para mobile */
+    }
+    .feedbacks-grid {
+        /* Passa para 2 colunas */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        padding: 0 20px;
+    }
+}
+
+/* Media Query para Celulares (576px) */
+@media (max-width: 576px) {
+    .feedbacks-grid {
+        /* Passa para 1 coluna */
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .maisde h3, .maisde h2 {
+        font-size: 10vw;
+    }
+    .revendedores h3 {
+        font-size: 18vw;
+    }
+    .revendedores p {
+        letter-spacing: 0.5rem;
+    }
+}
