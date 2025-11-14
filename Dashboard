@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Feedbacks - IceDev</title>
+
+    <link rel="icon" type="image/x-icon" href="https://i.pinimg.com/736x/6b/5c/04/6b5c0446b57a08cd09b04b28fb458633.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kavoon&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-principal: #00C4DF;
+    --cor-texto: #333;
+    --bg-externo: #111111; 
+    --bg-interno: #F5F7FA;
+    --borda-arredondada: 30px; 
+    --fonte-titulo: 'Kavoon', cursive;
+    --fonte-corpo: 'Montserrat', sans-serif;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    background-color: var(--bg-externo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.app-container {
+    background-color: var(--bg-interno);
+    width: 100%;
+    max-width: 1600px;
+    border-radius: var(--borda-arredondada);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 5%;
+    background-color: transparent;
+}
+
+.logo {
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    color: var(--cor-principal);
+    text-decoration: none;
+}
+
+.nav-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--cor-principal);
+    font-family: var(--fonte-titulo);
+    font-size: 1.1rem;
+}
+
+.btn-pedir {
+    background-color: var(--cor-principal);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: var(--fonte-titulo);
+    font-size: 1.2rem;
+}
+
+.main-content {
+    padding: 20px 5% 60px 5%; 
+    flex: 1;
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.dashboard-header h1 {
+    font-family: var(--fonte-titulo);
+    font-size: 3.5rem;
+    color: var(--cor-principal);
+    margin-bottom: 10px;
+    text-shadow: 
+        -2px -2px 0 #000,
+         2px -2px 0 #000,
+        -2px  2px 0 #000,
+         2px  2px 0 #000,
+    ;
+    -webkit-text-stroke: 5px #000;
+    paint-order: stroke fill;
+}
+
+.dashboard-header p {
+    font-size: 1rem;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.iframe-wrapper {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    padding: 10px; 
+    border: 1px solid #eee;
+}
+
+iframe {
+    width: 100%;
+    height: 900px;
+    border: none;
+    border-radius: 15px;
+    display: block;
+}
+
+@media (max-width: 768px) {
+body {
+    padding: 10px;
+}
+            
+.app-container {
+    border-radius: 20px;
+}
+
+.logo { font-size: 2rem; }
+    .dashboard-header h1 { font-size: 2.2rem; }
+    .nav-links { display: none; } 
+            
+iframe {
+    height: 1100px; 
+    }
+}
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <main class="main-content">
+        <div class="dashboard-header">
+            <h1>Sorvete Dev</h1>
+            <p>Painel de Controle de Qualidade</p>
+        </div>
+    <div class="iframe-wrapper">
+        <iframe 
+            src="https://lookerstudio.google.com/embed/reporting/cab47379-ecaf-4d80-adc1-bfda838dd025/page/bKYfF" 
+            allowfullscreen 
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox">
+        </iframe>
+    </div>
+</main>
+
+</div>
+
+</body>
+</html>
